@@ -6,12 +6,13 @@ sudo: required
 branches:
   only:
   - master
+  - develop
 before_script:
   - npm install -g @angular/cli
 script:
 - ng lint
 - npm run test-headless
-- ng build --prod --base-href https://dung1764.github.io/git-tranning/
+- ng build --prod --base-href https://dung1764.github.io/git-traning/
 deploy:
   provider: pages
   skip_cleanup: true
