@@ -10,9 +10,13 @@ branches:
 before_script:
   - npm install -g @angular/cli
 script:
-- ng lint
-- npm run test-headless
-- ng build --prod --base-href https://dung1764.github.io/git-traning/
+  - ng lint
+  - npm run test-headless
+before_deploy:
+  script:
+    - ng build --prod --base-href https://dung1764.github.io/git-traning/
+  on:
+    branch: master
 deploy:
   provider: pages
   skip_cleanup: true
