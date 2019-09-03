@@ -13,9 +13,7 @@ script:
   - ng lint
   - npm run test-headless
 before_deploy:
-  script: ng build --prod --base-href https://dung1764.github.io/git-traning/
-  on:
-    branch: master
+  - ng build --prod --base-href https://dung1764.github.io/git-traning/
 deploy:
   provider: pages
   skip_cleanup: true
